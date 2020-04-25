@@ -7,9 +7,10 @@ import pack.PageElements.UpsPageElements;
 
 public class UpsActions {
 
-	UpsPageElements pageElements;
+	UpsPageElements pageElements; // previous class object decleration
+	//constructor
 	public UpsActions (WebDriver driver) {
-		this.pageElements = new UpsPageElements ();
+		this.pageElements = new UpsPageElements ();// object creation 
 		PageFactory.initElements(driver, pageElements);
 	}
 	public void inputCountryName (String str) {

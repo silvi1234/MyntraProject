@@ -44,6 +44,6 @@ public class TestUps  extends UpsShippingDriver {
 	@AfterMethod 
 	public void afterMethod () {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		driver.close();
+		//driver.close();
 	}
 }
