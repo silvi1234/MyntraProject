@@ -10,7 +10,7 @@ public class AfterActions {
 	
 	@After
 	public void afterActions() {
-		SetupDriver.driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+		SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		SetupDriver.tearDownChromeDriver();
 	}
 

@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class UpsShippingDriver {
 
 	public WebDriver getChromeDriver () {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\silvi\\Desktop\\seleniumxpath\\Chrome\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		return driver;
 	}

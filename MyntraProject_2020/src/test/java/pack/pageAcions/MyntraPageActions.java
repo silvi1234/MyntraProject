@@ -21,17 +21,17 @@ public class MyntraPageActions {
 		//WebDriver driver =SetupDriver.getChromeDriver();
 		//MyntraPageActions actions = new MyntraPageActions (this.driver);
 		this.elements = new MyntraPageElements ();
-		PageFactory.initElements(SetupDriver.driver, elements);
+		PageFactory.initElements(SetupDriver.chromeDriver, elements);
 		
 	}
 	
 	public void getMyntrahomepage() {
 		
-		WebDriver driver =SetupDriver.getChromeDriver();
-		SetupDriver.driver.get("https://www.myntra.com");
-		SetupDriver.driver.manage().window().maximize();
-		SetupDriver.driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		SetupDriver.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+		SetupDriver.chromeDriver.get("https://www.myntra.com");
+		SetupDriver.chromeDriver.manage().window().maximize();
+		SetupDriver.chromeDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		
 
 		
@@ -53,7 +53,7 @@ public class MyntraPageActions {
 	
 	
 	public String HomepagePageTitle(){
-		String HomePageTitle =  SetupDriver.driver.getTitle();
+		String HomePageTitle =  SetupDriver.chromeDriver.getTitle();
 		return HomePageTitle;
 	}
 	

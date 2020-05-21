@@ -9,22 +9,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SetupDriver {
 	
 	
-	public static WebDriver driver;
+	public static WebDriver chromeDriver;
 
 	public static void setupChromeDriver() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\silvi\\Desktop\\seleniumxpath\\Chrome\\chromedriver.exe");
+		chromeDriver = new ChromeDriver();
 		
 	}
 
 	public static WebDriver getChromeDriver() {
 		
-		return driver;
+		return chromeDriver;
 		
 	}
 
 	public static void tearDownChromeDriver() {
-		driver.quit();
+		chromeDriver.quit();
 	}
 
 
