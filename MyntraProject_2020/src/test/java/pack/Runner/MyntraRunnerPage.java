@@ -8,7 +8,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
-	@CucumberOptions(features={"src/test/resources/Features/MyntraPage.feature"},
+	@CucumberOptions(features={"src/test/resources/Features"},
             glue={"pack.stepDefn","pack.Utilities"}, tags={"@Sprint1, @Sanity"},
 			 plugin = {"pretty", "html:target/cucumber-htmlreport",
 			"json:target/cucumber-jsonreport/cucumber-report.json",

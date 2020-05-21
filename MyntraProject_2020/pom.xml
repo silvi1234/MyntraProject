@@ -103,7 +103,7 @@
 				<version>2.21.0</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>UpsRunner.xml</suiteXmlFile>
+						<suiteXmlFile>Searchbutton.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
