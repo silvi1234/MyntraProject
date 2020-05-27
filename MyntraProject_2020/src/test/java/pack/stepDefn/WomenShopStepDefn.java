@@ -1,5 +1,7 @@
 package pack.stepDefn;
 
+import org.testng.Assert;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -49,6 +51,10 @@ public class WomenShopStepDefn {
 	@Then("^user lands on a new page$")
 	public void user_lands_on_a_new_page()   {
 		 newaction.newpagedisplayed();
+		 String expectedTitle = "Shrugs - Buy Long Shrugs For Women Online - Myntra";
+	     String actualTitle   = newaction.newpagedisplayed();
+	     
+	     Assert.assertEquals(actualTitle, expectedTitle);
 	     
 	}
 
@@ -61,19 +67,44 @@ public class WomenShopStepDefn {
 	public void clicks_on_ADD_TO_BAG() {
 	    newaction.AddtoBag();
 	}
-
-
-	@Then("^User  mouseover to Bag and clicks on Bag$")
-	public void user_mouseover_to_Bag_and_clicks_on_Bag()   {
-		 newaction.gotoBag();
-	     
+	@When("^User click on bag Link$")
+	public void user_click_on_bag_Link() throws Exception {
+     newaction.mouseOver();
+     
 	}
-
-	@Then("^User lands to a new page$")
-	public void user_lands_to_a_new_page()   {
+	@When("^User lands to Cart page and Click on apply link$")
+	public void user_lands_to_Cart_page_and_Click_on_apply_link() throws Exception  {
 	    
-		 newaction.placeorderpage();
+	    newaction.cartPageApplyCoupon();
 	}
 
+	@When("^User enter invalid cupon code$")
+	public void user_enter_invalid_cupon_code() throws Exception {
+	    newaction.couponTextbox();
+	}
+	@When("^User click apply button of textbox$")
+	public void user_click_apply_button_of_textbox()  {
+	   newaction.clickApplyBtn();
+	}
+	@Then("^An error message is displayed$")
+	public void an_error_message_is_displayed() {
+		String expectederrosMsg = "Coupon code is not valid";
+		System.out.println("Error Message :" + expectederrosMsg);
+		String actualErrorMsg = newaction.errorMsg();
+		Assert.assertEquals(actualErrorMsg, expectederrosMsg);
+		
+	}
+//	
+//	@When("^User takes a screenshoot of the page$")
+//	public void user_takes_a_screenshoot_of_the_page() throws Exception  {
+//	    newaction.takeScrnsht();
+//	  
+//	}
+	@Then("^User clicks on the bottom apply link$")
+	public void user_clicks_on_the_bottom_apply_link() throws Exception {
+	   
+	   newaction.closeButton();
+	}
+	
 
 }

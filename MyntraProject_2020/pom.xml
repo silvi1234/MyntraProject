@@ -104,7 +104,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>Searchbutton.xml</suiteXmlFile>
-						<suiteXmlFile>womensection.xml</suiteXmlFile>
+						
 					</suiteXmlFiles>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>

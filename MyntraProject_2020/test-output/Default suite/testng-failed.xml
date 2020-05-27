@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pack.Runner.WomenShopRunner">
+      <class name="pack.Runner.KidsCatagoryRunner">
         <methods>
-          <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="1"/>
           <include name="generateExtentReport"/>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="2"/>
           <include name="tearDownClass"/>
         </methods>
-      </class> <!-- pack.Runner.WomenShopRunner -->
+      </class> <!-- pack.Runner.KidsCatagoryRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

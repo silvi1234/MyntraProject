@@ -18,8 +18,7 @@ public class MyntraPageActions {
 	
 	public MyntraPageActions () {
 		
-		//WebDriver driver =SetupDriver.getChromeDriver();
-		//MyntraPageActions actions = new MyntraPageActions (this.driver);
+		
 		this.elements = new MyntraPageElements ();
 		PageFactory.initElements(SetupDriver.chromeDriver, elements);
 		
@@ -36,26 +35,24 @@ public class MyntraPageActions {
 
 		
 	}
-	public void getsearchbutton() {
+	public void getsearchbutton(String str) throws Exception {
+		Thread.sleep(2000);
 		elements.searchbutton.clear();
-		elements.searchbutton.sendKeys("Tshirts");
+		elements.searchbutton.sendKeys(str);
 	}
-	public void Entersearchbutton() {
-		
+	public void Entersearchbutton() throws Exception {
+		Thread.sleep(2000);
 	  
 		elements.searchbutton.sendKeys(Keys.ENTER);
 		
 	}
-	public String displaydsearchItem () {
-		String tshirttext = elements.displayItem.getText();
-	    return tshirttext;
-	}
+	public String displaydsearchItem () throws Exception {
+		Thread.sleep(2000);
+
 	
-	
-	public String HomepagePageTitle(){
-		String HomePageTitle =  SetupDriver.chromeDriver.getTitle();
-		return HomePageTitle;
-	}
-	
+	String HomePageTitle =  SetupDriver.chromeDriver.getTitle();
+	return HomePageTitle;
+ }
+
 
 }
