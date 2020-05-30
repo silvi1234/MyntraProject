@@ -39,13 +39,13 @@ public class WomenShopStepDefn {
 	}
 
 	@When("^clicks on FOREVER (\\d+) brand$")
-	public void clicks_on_FOREVER_brand(int arg1)  {
+	public void clicks_on_FOREVER_brand(int arg1) throws Exception  {
 	   newaction.brandclick();
 	}
 
 
 	@When("^User clicks on an item from the displayed item$")
-	public void user_clicks_on_an_item_from_the_displayed_item() {
+	public void user_clicks_on_an_item_from_the_displayed_item() throws Exception {
 	 newaction.randomitemclicked();
 	}
 	@Then("^user lands on a new page$")
@@ -64,7 +64,7 @@ public class WomenShopStepDefn {
 		 newaction.size();
 	}
 	@Then("^clicks on ADD TO BAG$")
-	public void clicks_on_ADD_TO_BAG() {
+	public void clicks_on_ADD_TO_BAG() throws Exception {
 	    newaction.AddtoBag();
 	}
 	@When("^User click on bag Link$")

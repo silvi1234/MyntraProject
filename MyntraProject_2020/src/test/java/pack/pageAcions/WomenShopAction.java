@@ -41,15 +41,18 @@ public class WomenShopAction {
 public void brandsection() {
 	    action.moveToElement(pageelements.brandTab).build().perform();
 	}
-public void brandclick() {
-    
-	pageelements.selectbrand.click();
-	SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+public void brandclick() throws Exception {
+	Thread.sleep(2000);
+	js.executeScript("arguments[0].click();", pageelements.selectbrand); 
+	//pageelements.selectbrand.click();
+	
 }
-public void randomitemclicked()  {
-	SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+public void randomitemclicked() throws Exception  {
+
+    Thread.sleep(2000);
 	action.moveToElement(pageelements.imagesection).build().perform();
-	pageelements.imageTab.click();
+	js.executeScript("arguments[0].click();", pageelements.imageTab); 
+	//pageelements.imageTab.click();
 	
 	}
 public String newpagedisplayed()  {
@@ -67,8 +70,8 @@ public void size() {
 	
 }
 
-public void AddtoBag() {
-	SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+public void AddtoBag() throws Exception {
+	Thread.sleep(2000);
 	//pageelements.addtobagbtn.click();
 	 js.executeScript("arguments[0].click();", pageelements.addtobagbtn); 
 }
@@ -78,7 +81,7 @@ public void mouseOver() throws Exception {
     pageelements.bagbtn.click();
 }
 public void cartPageApplyCoupon() throws Exception {
-	Thread.sleep(6000);
+	Thread.sleep(4000);
 	for (String winHandle : SetupDriver.chromeDriver.getWindowHandles() ) {
 		SetupDriver.chromeDriver.switchTo().window(winHandle);
 	}
@@ -90,10 +93,10 @@ public void cartPageApplyCoupon() throws Exception {
 }
 public void couponTextbox() throws Exception {
 	action.moveToElement(pageelements.textbox).build().perform();
-	SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	Thread.sleep(3000);
 	pageelements.inputtext.clear();
 	pageelements.inputtext.sendKeys("wzcq1234nm");
-	Thread.sleep(5000);
+	Thread.sleep(4000);
 	
 }
 public void clickApplyBtn() {
