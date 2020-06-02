@@ -37,8 +37,7 @@ System.out.println("Total category : "+ elemnts.sweatshirtt.size());
 		Thread.sleep(3000);
 		elemnts.sweatshirtt.get(5).click();		
 		Thread.sleep(3000);
-		elemnts.sweatshirtt.get(0).click();		
-		Thread.sleep(3000);
+		
 		
 		action.moveToElement(elemnts.morelink).build().perform();
 		elemnts.morelink.click();
@@ -46,7 +45,7 @@ System.out.println("Total category : "+ elemnts.sweatshirtt.size());
 	}
 	public void checkSweatShirt() throws Exception {
 		Thread.sleep(3000);
-		js.executeScript("arguments[0].scrollIntoView();", elemnts.sweetshrtbtn); 
+		//js.executeScript("arguments[0].scrollIntoView();", elemnts.sweetshrtbtn); 
 		elemnts.sweetshrtbtn.click();
     	
 		

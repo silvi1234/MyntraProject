@@ -21,7 +21,7 @@ public class ClosingFeatureElmnts {
 	@FindBy(xpath ="//div[@class='categories-more']")
 	public WebElement morelink;
 	
-	@FindBy (xpath ="//html//body//div//div//div//main//div//div//section//div//div//div//div//ul//li//label[contains(text(),'Sweatshirts')]//div")
+	@FindBy (xpath ="//ul[@class='FilterDirectory-list']//label[contains(@class,'common-customCheckbox')][contains(text(),'Sweatshirts')]")
 	public WebElement sweetshrtbtn;
 	
 	@FindBy (xpath ="//span[@class='myntraweb-sprite FilterDirectory-close sprites-remove']")

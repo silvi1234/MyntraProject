@@ -1,4 +1,3 @@
-@Second
 Feature: This feature will test Myntra Women clothing section
 
   Background: 

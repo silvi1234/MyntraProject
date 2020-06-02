@@ -1,4 +1,3 @@
-
 Feature: T-Shirt order feature
   This feature will verify all the steps to order Tshirt
 

@@ -42,15 +42,15 @@ public class ContactActions {
     	
     	Thread.sleep(2000);
     	action.moveToElement(Elements.verificationquestion).build().perform();
-    	Thread.sleep(2000);
+    	Thread.sleep(1000);
     	Elements.verificationquestion.click();
     	Thread.sleep(2000);
     }
     
    public void textdisplay() throws Exception{
-    	Thread.sleep(4000);
+    	Thread.sleep(2000);
     	Elements.textdisplay.click();
-    	Thread.sleep(8000);
+    	Thread.sleep(2000);
     }
     
  

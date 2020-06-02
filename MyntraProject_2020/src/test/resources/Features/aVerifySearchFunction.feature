@@ -10,13 +10,15 @@ Feature: Myntra Homepage Search Text Box Verification
     And Customer press enter
     Then Customer should be able to see searched items successfully.
 
-  @Sanity @Sprint1
+  @Regression @Sprint1
   Scenario Outline: Verify customer can search random items from search text button
     When Customer types random items in the "<Searchbox>"
     And Customer press enter
     Then Customer should be able to see searched items successfully.
 
     Examples: 
-      | Searchbox |
-      | Shrugs    |
-      | Tops      |
+    
+      | Searchbox        |
+      | Shrugs           |
+      | Bags for women   |
+      | Jackets men      |

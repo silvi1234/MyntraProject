@@ -2,6 +2,7 @@ package pack.pageAcions;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.StandardCopyOption;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,6 +11,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.reporters.Files;
+
 import pack.Utilities.SetupDriver;
 import pack.pageElements.WomenShopElements;
 
@@ -110,9 +113,11 @@ public String errorMsg() {
 public void closeButton() throws Exception {
 				
 	File srcFile = ((TakesScreenshot)SetupDriver.chromeDriver).getScreenshotAs(OutputType.FILE);   
-
+	File destDir= new File("c:\\Users\\silvi\\ErrorMasgscreenshot.png");
 	try {
-		FileUtils.copyFile(srcFile, new File("c:\\Users\\silvi\\ErrorMasgscreenshot.png"));
+		
+		FileUtils.copyFile(srcFile, destDir);
+	
 	} 
 	catch(IOException e) {
 		System.out.println("Screenshot unable");

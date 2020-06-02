@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
 	@CucumberOptions(features={"src/test/resources/Features"},
-            glue={"pack.stepDefn","pack.Utilities"}, tags={"@Sprint1,"},
+            glue={"pack.stepDefn","pack.Utilities"}, tags={"@Sprint1,@Sanity"},
 			 plugin = {"pretty", "html:target/cucumber-htmlreport",
 			"json:target/cucumber-jsonreport/cucumber-report.json",
 			"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}, 
