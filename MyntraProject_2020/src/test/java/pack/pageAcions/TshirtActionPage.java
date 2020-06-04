@@ -2,6 +2,7 @@ package pack.pageAcions;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -11,13 +12,15 @@ import pack.pageElements.TshirtPageElement;
 
 public class TshirtActionPage {
 TshirtPageElement element;
+JavascriptExecutor js =(JavascriptExecutor)SetupDriver.chromeDriver;
+Actions action=new Actions(SetupDriver.chromeDriver);
 	
 	public TshirtActionPage()
 	{ this.element=new TshirtPageElement();
 	PageFactory.initElements(SetupDriver.chromeDriver, element);
 	
 	}
-	Actions action=new Actions(SetupDriver.chromeDriver);
+
 	public void getHomePage() {
 
 		SetupDriver.chromeDriver.get("https://www.myntra.com/");
@@ -44,8 +47,10 @@ element.Roadster.click();
 }
 public void style()
 {
-	SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-	element.Roundneck.click();
+	SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	action.moveToElement(element.imagecontainer).build().perform();
+	//element.Roundneck.click();
+	js.executeScript("arguments[0].click();", element.Roundneck);
 
 for(String winHandle : SetupDriver.chromeDriver.getWindowHandles())
 {SetupDriver.chromeDriver.switchTo().window(winHandle);
@@ -53,32 +58,32 @@ for(String winHandle : SetupDriver.chromeDriver.getWindowHandles())
 }
 public void size()
 { 
-	SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	action.moveToElement(element.SizeCont).build().perform();
 element.Largesize.click();
 }
 public void AddBag()
 {
-	SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	element.Addtobag.click();
 
 }
  public void GoToBag()
  { 
-	 SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	 SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	 element.Gotobag.click();
  
  }
  public void PlaceOrder()
  { 
-	 SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	 SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	 
 	 action.moveToElement(element.orderCont).build().perform();
  element.Placeorder.click();
  }
 	public void Verification()
 	{
-		SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		SetupDriver.chromeDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		String expectedPageTitle="Myntra";
 	String actualPageTitle=SetupDriver.chromeDriver.getTitle();
 	Assert.assertEquals(expectedPageTitle, actualPageTitle);

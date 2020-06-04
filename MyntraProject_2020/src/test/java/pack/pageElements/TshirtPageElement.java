@@ -13,7 +13,9 @@ public class TshirtPageElement {
 	public WebElement BrandCont;
 	@FindBy(xpath="//*[@id='mountRoot']/div/div[1]/main/div[3]/div[1]/section/div/div[3]/ul/li[1]/label/div")
 	public WebElement Roadster;
-	@FindBy(xpath="//*[@id='desktopSearchResults']/div[2]/section/ul/li[1]/a/div[1]/div/div/div/picture/img")
+	@FindBy(xpath ="//div[@class='search-searchProductsContainer row-base']")
+	public WebElement imagecontainer;
+	@FindBy(xpath="//li[6]//a[1]//div[1]//div[1]//div[1]//div[1]//picture[1]//img[1]")
 	public WebElement Roundneck;
 	@FindBy(xpath="//*[@id='sizeButtonsContainer']/div[2]")
 	public WebElement SizeCont;
