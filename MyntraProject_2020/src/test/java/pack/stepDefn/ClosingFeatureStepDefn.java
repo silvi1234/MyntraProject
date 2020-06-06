@@ -20,8 +20,8 @@ public void customer_mouse_over_on_kids_menu() throws Exception  {
    
 }
 
-@When("^Click on H&M from brand section$")
-public void click_on_H_M_from_brand_section() throws Exception  {
+@When("^Click on GAP kids from brand section$")
+public void click_on_GAP_kids_from_brand_section() throws Exception  {
     actn.selectBrand();
    
 }
@@ -48,7 +48,7 @@ public void click_on_close_icon() throws Exception  {
 public void customer_can_show_all_swimshirts()  {
     
    String actualText = actn.itemDisplayed();
-   String expectedText = "H&M Kids Clothing & Footwear";
+   String expectedText = "Kids Wear Online Store";
    System.out.println("Items dispalyed successfully: " + expectedText);
    Assert.assertEquals(actualText, expectedText);
 }

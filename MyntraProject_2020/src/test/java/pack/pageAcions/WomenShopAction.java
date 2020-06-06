@@ -1,17 +1,18 @@
 package pack.pageAcions;
 
 import java.io.File;
-import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.concurrent.TimeUnit;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.reporters.Files;
+
 
 import pack.Utilities.SetupDriver;
 import pack.pageElements.WomenShopElements;
@@ -106,24 +107,35 @@ public void clickApplyBtn() {
 	//action.moveToElement(pageelements.clickapply).build().perform();
 	pageelements.clickapply.click();
 }
-public String errorMsg() {
-  return pageelements.errormsg.getText();			
+public void errorMsg() throws Exception {
+ // return pageelements.errormsg.getText();		
+	String getMsg = pageelements.errormsg.getText();
+	System.out.println("Warning messsge:" +  getMsg);
+	Thread.sleep(2000);
+	
+	TakesScreenshot scrShot =((TakesScreenshot)SetupDriver.chromeDriver);
+	File scrFile = scrShot.getScreenshotAs(OutputType.FILE);
+	Path srcFilePath = Paths.get(scrFile.getAbsolutePath());
+	Path destDir = Paths.get("C:\\Users\\silvi\\git\\repository\\MyntraProject_2020\\WarningMsg.png");
+	Files.copy(srcFilePath, destDir, StandardCopyOption.REPLACE_EXISTING);
 	
 }
 public void closeButton() throws Exception {
-				
-	File srcFile = ((TakesScreenshot)SetupDriver.chromeDriver).getScreenshotAs(OutputType.FILE);   
-	File destDir= new File("c:\\Users\\silvi\\ErrorMasgscreenshot.png");
-	try {
-		
-		FileUtils.copyFile(srcFile, destDir);
+	Thread.sleep(2000);
+	pageelements.applyBtn.click();
 	
-	} 
-	catch(IOException e) {
-		System.out.println("Screenshot unable");
-	}		
-	Thread.sleep(5000);
-		   pageelements.applyBtn.click();
+//	File srcFile = ((TakesScreenshot)SetupDriver.chromeDriver).getScreenshotAs(OutputType.FILE);   
+//	File destDir= new File("c:\\Users\\silvi\\ErrorMasgscreenshot.png");
+//	try {
+//		
+//		FileUtils.copyFile(srcFile, destDir);
+//	
+//	} 
+//	catch(IOException e) {
+//		System.out.println("Screenshot unable");
+//	}		
+//	Thread.sleep(5000);
+//		   pageelements.applyBtn.click();
 		 
 }
 }

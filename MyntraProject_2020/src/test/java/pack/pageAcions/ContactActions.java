@@ -23,9 +23,9 @@ public class ContactActions {
 		 ((JavascriptExecutor) SetupDriver.chromeDriver)
 	     .executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		 action.moveToElement(Elements.contactus).build().perform();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		Elements.contactus.click();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 	}
 	public void frequentlyasked() throws Exception {
 		 for (String winHandle : SetupDriver.chromeDriver.getWindowHandles() ) {

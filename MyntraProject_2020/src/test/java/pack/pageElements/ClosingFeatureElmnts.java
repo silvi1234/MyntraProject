@@ -12,7 +12,7 @@ public class ClosingFeatureElmnts {
 	@FindBy (xpath ="//a[@class='desktop-main'][contains(text(),'Kids')]")
 	public WebElement kidsmenutab;
 	
-	@FindBy (xpath ="//a[contains(text(),'H&M')]")
+	@FindBy (xpath ="//a[contains(text(),'GAP Kids')]")
 	public WebElement kidsbrand;
 	
 	@FindBy(className = "common-checkboxIndicator")
