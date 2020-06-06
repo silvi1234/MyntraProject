@@ -25,7 +25,7 @@ public class TestUps  extends UpsShippingDriver {
 	}
 	@Test 
 	public void ShippingTest () {
-		actions.inputCountryName("United States");
+		actions.inputCountryName("United states");
 		actions.inputName("Silvi yeasmin");
 		actions.inputContactName("SY");
 		actions.inputAddress1("463 E 9th street");

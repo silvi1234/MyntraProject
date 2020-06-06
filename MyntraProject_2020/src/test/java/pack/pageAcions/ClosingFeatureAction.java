@@ -29,7 +29,7 @@ public class ClosingFeatureAction {
 	}
 	public void moreLink() throws Exception {
 		Thread.sleep(2000);
-System.out.println("Total category : "+ elemnts.sweatshirtt.size());
+     System.out.println("Total category : "+ elemnts.sweatshirtt.size());
 		
         elemnts.sweatshirtt.get(2).click();
 		Thread.sleep(3000);
